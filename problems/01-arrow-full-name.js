@@ -14,12 +14,15 @@ arrowGetFullName(p2); // => 'Charlie Brown'
 
 ***********************************************************************/
 
-const arrowGetFullName = person => {person[firstName] + " " + person[lastName]};
+const arrowGetFullName = (person) => {
+  const name = person.firstName;
+  const lastName = person.lastName;
+return name + " " + lastName };
 
-let p1 = {firstName: 'John', lastName: 'Doe'};
-arrowGetFullName(p1); // => 'John Doe'
-let p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
-arrowGetFullName(p2); // => 'Charlie Brown'
+const p1 = {firstName: 'John', lastName: 'Doe'};
+console.log(arrowGetFullName(p1)); // => 'John Doe'
+const p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
+console.log(arrowGetFullName(p2)); // => 'Charlie Brown'
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
