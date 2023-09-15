@@ -27,35 +27,42 @@ Example 4:
   console.log(threeDays()); // prints "Happy New Year!"
 
 ***********************************************************************/
-function countDownTimer(num) {
-  let count = num;
-  let down = num => {
-    if (count > 0) {
-      return 'Happy new year!';
-    } else{
-      count --;
-      return hny;
-    }
+function countDownTimer(n) {
+  let count = n;
+  if(count === 0) {
+    return 'Happy New Year!';
+  } else {
+    return function down() {
+      if(count > 0) {
+        count--;
+        return down();
+
+      } else {
+        return 'Happy New Year!';
+      }
   }
-  return down();
-  
+}
+
 };
 
+// // Example 1
+console.log(countDownTimer(0)); // prints "Happy New Year!"
 
+// Example 2
+let oneDay = countDownTimer(1); // returns a function
+console.log(oneDay()); // prints "Happy New Year!"
 
-  console.log(countDownTimer(0)); // prints "Happy New Year!"
+// Example 3
+let twoDays = countDownTimer(2); // returns a function
+console.log(twoDays()); // returns a function
+console.log(twoDays()); // prints "Happy New Year!"
 
-  let oneDay = countDownTimer(1); // returns a function
-  console.log(oneDay()); // prints "Happy New Year!"
+// // Example 4
+let threeDays = countDownTimer(3); // returns a function
+console.log(threeDays()); // returns a function
+console.log(threeDays()); // returns a function
+console.log(threeDays()); // prints "Happy New Year!"
 
-  let twoDays = countDownTimer(2); // returns a function
-  console.log(twoDays()); // returns a function
-  console.log(twoDays()); // prints "Happy New Year!"
-
-  let threeDays = countDownTimer(3); // returns a function
-  console.log(threeDays()); // returns a function
-  console.log(threeDays()); // returns a function
-  console.log(threeDays()); // prints "Happy New Year!"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
