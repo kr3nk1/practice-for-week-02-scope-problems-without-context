@@ -18,8 +18,9 @@ sandwich2("pb") // => "One sandwich with tomato and pb"
 ***********************************************************************/
 
 function sandwichMaker() {
+
   let base = "One sandwich with tomato";
- let maker = (arg) => {
+  let maker = (arg) => {
     base += " and " + arg; 
     return base;
 }
