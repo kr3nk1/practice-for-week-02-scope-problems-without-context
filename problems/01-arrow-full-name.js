@@ -19,11 +19,6 @@ const arrowGetFullName = (person) => {
   const lastName = person.lastName;
 return name + " " + lastName };
 
-const p1 = {firstName: 'John', lastName: 'Doe'};
-console.log(arrowGetFullName(p1)); // => 'John Doe'
-const p2 = {firstName: 'Charlie', lastName: 'Brown', age: 9};
-console.log(arrowGetFullName(p2)); // => 'Charlie Brown'
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = arrowGetFullName;

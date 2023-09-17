@@ -11,8 +11,13 @@ let result3 = reverseStr("potato"); // returns "otatop"
 
 
 ***********************************************************************/
-
-// Your code here
+let reverseStr = (str) => {
+  let strArray = str.split("");
+  let newArray = strArray.reverse()
+  
+  return newArray.join("");
+  
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
 try {

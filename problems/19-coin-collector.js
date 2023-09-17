@@ -24,9 +24,13 @@ Example 3:
   console.log(threeCoins(10)); // prints [ 25, 5, 10 ]
 
 ***********************************************************************/
-function coinCollector(numCoins) {
-  // Your code here
-}
+function coinCollector() {
+  let collectedCoinsArray = [];
+  return (arg) => {
+    collectedCoinsArray.push(arg);
+    return collectedCoinsArray;
+  }
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
